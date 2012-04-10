@@ -52,16 +52,6 @@ Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/r
 ### quotefm.recommendationByUser(id, options, cb)
 Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/recommendation/listByArticle>
 
- * username: ID to query.
- * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.  
-   ```function(err, obj)```
-   * err: defined when an error occured, otherwise ```undefined```
-   * obj: the actual resultobject, ```undefined``` on error
-
-### quotefm.recommendationByUser(username, options, cb)
-Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/recommendation/listByArticle>
-
  * id: ID to query.
  * options: an object containing key value pairs for building the parameter list. **optional**
  * cb: a callback. will be called on result.  
