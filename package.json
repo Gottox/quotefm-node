@@ -1,6 +1,6 @@
 {
   "name": "quotefm",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Enno Boland <eb@s01.de>",
   "description": "a node implementation of the Quote.fm API",
   "main": "./lib/quote.fm",

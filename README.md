@@ -5,10 +5,15 @@ var Quotefm = require('quotefm').Quotefm;
 
 var quotefm = new Quotefm();
 
-quotefm.user("Gottox", function(err, obj) {
+quotefm.user("Gottox", function(err, user) {
 	if(err)
 		return console.log("Error occured " + err);
-	console.log(obj)
+	console.log(user)
+	quotefm.recommendationByUser(user.id, {page: 0}, function(err, obj) {
+		if(err)
+			return console.log("Error occured " + err);
+		console.log(obj)
+	})
 });
 ```
 
@@ -37,16 +42,6 @@ Queries /recommendation/get, see <http://quote.fm/labs/documentation/recommendat
 ### quotefm.recommendationByArticle(id, options, cb)
 Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/recommendation/listByArticle>
 
- * id: ID to query.
- * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.  
-   ```function(err, obj)```
-   * err: defined when an error occured, otherwise ```undefined```
-   * obj: the actual resultobject, ```undefined``` on error
-
-### quotefm.recommendationByArticle(id, options, cb)
-Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/recommendation/listByArticle>
-
  * id: ID or URL to query, determinated by type (typeof id === 'string' -> url; typeof id === 'number' -> id)
  * options: an object containing key value pairs for building the parameter list. **optional**
  * cb: a callback. will be called on result.  
@@ -54,10 +49,10 @@ Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/r
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
 
-### quotefm.recommendationByUser(username, options, cb)
+### quotefm.recommendationByUser(id, options, cb)
 Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/recommendation/listByArticle>
 
- * id: ID to query.
+ * username: ID to query.
  * options: an object containing key value pairs for building the parameter list. **optional**
  * cb: a callback. will be called on result.  
    ```function(err, obj)```
