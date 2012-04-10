@@ -1,12 +1,12 @@
 {
   "name": "quotefm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Enno Boland <eb@s01.de>",
   "description": "a node implementation of the Quote.fm API",
   "main": "./lib/quote.fm",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nodejitsu/http-server.git"
+    "url": "https://github.com/Gottox/quotefm-node.git"
   },
   "keywords": [
     "quote.fm"
