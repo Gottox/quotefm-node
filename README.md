@@ -10,6 +10,7 @@ quotefm.user("Gottox", function(err, obj) {
 		return console.log("Error occured " + err);
 	console.log(obj)
 });
+```
 
 ## Usage
 
