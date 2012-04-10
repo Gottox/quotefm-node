@@ -8,7 +8,7 @@ var Quotefm = require('quotefm').Quotefm;
 var quotefm = new Quotefm();
 ```
 
-Afterwards you can use the following methodcalls:
+Afterwards you can use the following method calls:
 
 
 ### quotefm.recommendation(id, options, cb)
@@ -16,8 +16,8 @@ Queries /recommendation/get, see <http://quote.fm/labs/documentation/recommendat
 
  * id: ID to query.
  * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.
-   function(err, obj)
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
 
@@ -26,8 +26,18 @@ Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/r
 
  * id: ID to query.
  * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.
-   function(err, obj)
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
+   * err: defined when an error occured, otherwise ```undefined```
+   * obj: the actual resultobject, ```undefined``` on error
+
+### quotefm.recommendationByArticle(id, options, cb)
+Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/recommendation/listByArticle>
+
+ * id: ID to query.
+ * options: an object containing key value pairs for building the parameter list. **optional**
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
 
@@ -36,8 +46,18 @@ Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/r
 
  * id: ID to query.
  * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.
-   function(err, obj)
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
+   * err: defined when an error occured, otherwise ```undefined```
+   * obj: the actual resultobject, ```undefined``` on error
+
+### quotefm.recommendationByUser(username, options, cb)
+Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/recommendation/listByArticle>
+
+ * id: ID to query.
+ * options: an object containing key value pairs for building the parameter list. **optional**
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
 
@@ -46,8 +66,8 @@ Queries /article/get, see <http://quote.fm/labs/documentation/article/get>
 
  * id: ID to query.
  * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.
-   function(err, obj)
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
 
@@ -56,8 +76,8 @@ Queries /article/listByPage, see <http://quote.fm/labs/documentation/article/lis
 
  * id: ID to query.
  * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.
-   function(err, obj)
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
 
@@ -66,8 +86,8 @@ Queries /article/listByCategories, see <http://quote.fm/labs/documentation/artic
 
  * id: ID to query.
  * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.
-   function(err, obj)
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
 
@@ -76,8 +96,8 @@ Queries /page/get, see <http://quote.fm/labs/documentation/page/get>
 
  * id: ID to query.
  * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.
-   function(err, obj)
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
 
@@ -86,8 +106,8 @@ Queries /user/get, see <http://quote.fm/labs/documentation/user/get>
 
  * id: ID to query.
  * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.
-   function(err, obj)
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
 
@@ -96,8 +116,8 @@ Queries /user/listFollowers, see <http://quote.fm/labs/documentation/user/listFo
 
  * id: ID to query.
  * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.
-   function(err, obj)
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
 
@@ -106,27 +126,25 @@ Queries /user/listFollowings, see <http://quote.fm/labs/documentation/user/listF
 
  * id: ID to query.
  * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.
-   function(err, obj)
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
 
 ### quotefm.listPage(size, page, cb)
 Queries /page/get, see <http://quote.fm/labs/documentation/page/get>
 
- * id: ID to query.
- * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.
-   function(err, obj)
+ * size: how many entries per page.
+ * page: which page
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
 
-### quotefm.listCategories()
+### quotefm.listCategories(cb)
 Queries /category/list, see <http://quote.fm/labs/documentation/category/list>
 
- * id: ID to query.
- * options: an object containing key value pairs for building the parameter list. **optional**
- * cb: a callback. will be called on result.
-   function(err, obj)
+ * cb: a callback. will be called on result.  
+   ```function(err, obj)```
    * err: defined when an error occured, otherwise ```undefined```
    * obj: the actual resultobject, ```undefined``` on error
