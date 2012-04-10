@@ -1,3 +1,16 @@
+## Example
+
+``` javascript
+var Quotefm = require('quotefm').Quotefm;
+
+var quotefm = new Quotefm();
+
+quotefm.user("Gottox", function(err, obj) {
+	if(err)
+		return console.log("Error occured " + err);
+	console.log(obj)
+});
+
 ## Usage
 
 Instantiate a new object with:
@@ -9,7 +22,6 @@ var quotefm = new Quotefm();
 ```
 
 Afterwards you can use the following method calls:
-
 
 ### quotefm.recommendation(id, options, cb)
 Queries /recommendation/get, see <http://quote.fm/labs/documentation/recommendation/get>
@@ -34,7 +46,7 @@ Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/r
 ### quotefm.recommendationByArticle(id, options, cb)
 Queries /recommendation/listByArticle, see <http://quote.fm/labs/documentation/recommendation/listByArticle>
 
- * id: ID to query.
+ * id: ID or URL to query, determinated by type (typeof id === 'string' -> url; typeof id === 'number' -> id)
  * options: an object containing key value pairs for building the parameter list. **optional**
  * cb: a callback. will be called on result.  
    ```function(err, obj)```
@@ -94,7 +106,7 @@ Queries /article/listByCategories, see <http://quote.fm/labs/documentation/artic
 ### quotefm.page(id, options, cb)
 Queries /page/get, see <http://quote.fm/labs/documentation/page/get>
 
- * id: ID to query.
+ * id: ID or Domain to query, determinated by type (typeof id === 'string' -> domain; typeof id === 'number' -> id)
  * options: an object containing key value pairs for building the parameter list. **optional**
  * cb: a callback. will be called on result.  
    ```function(err, obj)```
@@ -104,7 +116,7 @@ Queries /page/get, see <http://quote.fm/labs/documentation/page/get>
 ### quotefm.user(id, options, cb)
 Queries /user/get, see <http://quote.fm/labs/documentation/user/get>
 
- * id: ID to query.
+ * id: ID or Username to query, determinated by type (typeof id === 'string' -> username; typeof id === 'number' -> id)
  * options: an object containing key value pairs for building the parameter list. **optional**
  * cb: a callback. will be called on result.  
    ```function(err, obj)```
@@ -114,7 +126,7 @@ Queries /user/get, see <http://quote.fm/labs/documentation/user/get>
 ### quotefm.followers(id, options, cb)
 Queries /user/listFollowers, see <http://quote.fm/labs/documentation/user/listFollowers>
 
- * id: ID to query.
+ * id: ID or Username to query, determinated by type (typeof id === 'string' -> username; typeof id === 'number' -> id)
  * options: an object containing key value pairs for building the parameter list. **optional**
  * cb: a callback. will be called on result.  
    ```function(err, obj)```
@@ -124,7 +136,7 @@ Queries /user/listFollowers, see <http://quote.fm/labs/documentation/user/listFo
 ### quotefm.followings(id, options, cb)
 Queries /user/listFollowings, see <http://quote.fm/labs/documentation/user/listFollowings>
 
- * id: ID to query.
+ * id: ID or Username to query, determinated by type (typeof id === 'string' -> username; typeof id === 'number' -> id)
  * options: an object containing key value pairs for building the parameter list. **optional**
  * cb: a callback. will be called on result.  
    ```function(err, obj)```
